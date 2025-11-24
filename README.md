@@ -1,6 +1,6 @@
 # Stratigraphic Patterns of Cambrian Trilobite Diversity in Eastern Asia
 
-This repository contains the complete submission package for the manuscript "Stratigraphic Patterns of Cambrian Trilobite Diversity in Eastern Asia: A Middle Cambrian Diversity Peak" submitted to the Journal of Asian Earth Sciences.
+This repository contains the complete submission package for the manuscript "Stratigraphic Patterns of Cambrian Trilobite Diversity in Eastern Asia: A Middle Cambrian Diversity Peak".
 
 ## Repository Structure
 
@@ -60,11 +60,11 @@ pdflatex main.tex
 
 If you use this work, please cite:
 
-Jones, K.T. (submitted). Stratigraphic Patterns of Cambrian Trilobite Diversity in Eastern Asia: A Middle Cambrian Diversity Peak. Journal of Asian Earth Sciences.
+Jones, K.T. (submitted). Stratigraphic Patterns of Cambrian Trilobite Diversity in Eastern Asia: A Middle Cambrian Diversity Peak. 
 
 ## License
 
-[Add your license here]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 

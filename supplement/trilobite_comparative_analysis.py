@@ -17,7 +17,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Tufte-inspired matplotlib style
 plt.rcParams['font.family'] = 'serif'
 plt.rcParams['font.size'] = 10
 plt.rcParams['axes.spines.top'] = False
