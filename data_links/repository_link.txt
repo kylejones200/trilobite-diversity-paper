@@ -1,0 +1,10 @@
+Data Repository Link (Placeholder)
+
+Upon acceptance, analysis code and derived datasets will be deposited in:
+[Repository name and URL will be added here]
+
+The raw occurrence data are available from the Paleobiology Database:
+https://paleobiodb.org
+
+Specific query parameters are provided in the Methods section of the manuscript.
+

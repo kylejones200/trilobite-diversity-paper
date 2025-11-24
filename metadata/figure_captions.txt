@@ -1,0 +1,20 @@
+Figure Captions for JAES Submission
+
+Figure 1. Geographic distribution of trilobite occurrences in eastern Asia, showing concentration in China with additional records from Korea and India. Map lines delineate study areas and do not necessarily depict accepted national boundaries.
+
+Figure 2. Alpha diversity through time showing peak diversity around 505 Ma and secondary peak at 498-500 Ma.
+
+Figure 3. First and last appearances of top 50 taxa, showing temporal ranges and turnover patterns.
+
+Figure 4. Origination and extinction rates through time, showing elevated turnover around the diversity peak.
+
+Figure 5. Rarefaction analysis comparing raw and standardized diversity, confirming robustness of the peak.
+
+Figure 6. Formation and zone relationships showing occurrence counts and taxonomic diversity for top formations and zones.
+
+Figure 7. Biostratigraphic ranges of zones and key taxa through time, showing temporal overlap and relationships.
+
+Figure 8. Zone-based diversity patterns showing taxonomic diversity and occurrence counts through time.
+
+Figure 9. Hierarchical clustering dendrogram of top 50 taxa based on temporal and geographic features. The dendrogram shows distinct clusters including a middle Cambrian group (Palaeadotes hunanensis, Pianaspis sinensis, Neoanomocarella asiatica) and an early Cambrian group (Redlichia, Eoredlichia).
+

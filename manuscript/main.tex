@@ -1,0 +1,250 @@
+\documentclass[preprint,12pt]{elsarticle}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\journal{Journal of Asian Earth Sciences}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Stratigraphic Patterns of Cambrian Trilobite Diversity in Eastern Asia: A Middle Cambrian Diversity Peak}
+
+\author[inst1]{Kyle T. Jones\corref{cor1}}
+
+\address[inst1]{American University, Washington, DC, USA}
+
+\cortext[cor1]{Corresponding author. E-mail address: kylejones@american.edu}
+
+\begin{abstract}
+\textbf{Background:} The Cambrian period marks a critical interval in marine life evolution, with rapid trilobite diversification and distinct faunal provinces in eastern Asia. Comprehensive analyses of diversity patterns across formations and zones remain limited.
+
+\textbf{Methods:} We analyze 3,917 trilobite occurrences from 1,299 taxa across 98 formations and 149 biostratigraphic zones in eastern Asia using Paleobiology Database data. Formation and zone diversity metrics were calculated, temporal patterns assessed using 1-million-year bins, rarefaction analysis performed to test robustness after standardizing for sampling intensity, turnover rates calculated per million-year bin, and hierarchical clustering performed on the top 50 taxa.
+
+\textbf{Results:} Our analysis reveals a middle Cambrian diversity peak at 498.8 million years ago, coinciding with the Linguagnostus reconditus zone. Rarefaction analysis confirms the peak remains robust after standardizing for sampling intensity. First-last appearance analysis shows elevated origination and extinction rates around this interval. Hierarchical clustering reveals distinct groups corresponding to known Cambrian faunal provinces. Regional comparison shows China contains 89\% of occurrences and 1,223 taxa spanning 522.6 to 487.6 million years ago, while Korea and India show more restricted assemblages.
+
+\textbf{Conclusions:} These patterns provide a framework for understanding middle Cambrian diversity in eastern Asia and demonstrate the utility of combining formation-based and zone-based diversity metrics for regional paleobiogeographic analysis. The diversity peak reflects both biological diversification and geological factors that enhanced fossil preservation in carbonate formations.
+\end{abstract}
+
+\begin{keyword}
+Cambrian \sep Trilobites \sep Eastern Asia \sep Biostratigraphy \sep Diversity \sep Paleobiogeography
+\end{keyword}
+
+\end{frontmatter}
+
+\section{Introduction}
+
+The Cambrian period marks a critical interval in the evolution of marine life, characterized by the rapid diversification of trilobites and the establishment of distinct faunal provinces such as the South China and North China platforms \citep{Zhang2008, Peng2012, Landing2013, Zhang2011}. Eastern Asia contains extensive Cambrian fossil-bearing sequences that preserve important records of trilobite diversity during this period \citep{Zhou2014, Zhu1999}. Previous studies have documented regional trilobite assemblages and biostratigraphic zones, but comprehensive analyses of diversity patterns across formations and zones remain limited \citep{Peng2001, Yuan2011, Zhou2003, Geyer1998}.
+
+This study demonstrates that trilobite diversity in eastern Asia peaked during the middle Cambrian at 498.8 million years ago, coinciding with the Linguagnostus reconditus zone and reflecting both biological diversification and geological factors that enhanced fossil preservation. We argue that this diversity peak aligns with reported middle Cambrian faunal changes in eastern Asia and can be understood through the integration of formation-based lithostratigraphy and zone-based biostratigraphy, supported by turnover rate analysis and sampling standardization.
+
+The integration of formation and zone data provides complementary perspectives on trilobite diversity. Formations represent lithostratigraphic units that reflect depositional environments and preservation potential, while zones represent biostratigraphic intervals defined by index taxa \citep{Peng2012}. By analyzing both, we can distinguish between patterns driven by biological diversity and those influenced by geological factors such as rock availability and preservation quality.
+
+\section{Study Area and Geological Setting}
+
+The study area encompasses eastern Asia, including China, Korea, and India, spanning approximately 76.4° to 150.0°E longitude and 17.0° to 42.1°N latitude. This region contains extensive Cambrian fossil-bearing sequences deposited on the South China Platform, North China Platform, and adjacent Gondwanan margin \citep{Zhu1999, Zhou2014}. The South China Platform, in particular, preserves well-exposed Cambrian sequences with extensive trilobite faunas in carbonate and siliciclastic formations \citep{Zhang2003, Lin2017}. The North China Platform contains additional Cambrian sequences, though with generally less extensive trilobite preservation. The study area includes major Cambrian formations such as the Huaqiao Formation (middle Cambrian carbonate), Kaili Formation (middle Cambrian), and Hsuchuang Formation (middle Cambrian), which have yielded extensive trilobite assemblages \citep{Peng2004, Lu2019}.
+
+All ages follow the International Chronostratigraphic Chart (ICS, 2024). The middle Cambrian diversity peak at 498.8 Ma occurs within the Drumian Stage of the Cambrian Series 3.
+
+\section{Methods}
+
+\subsection{Data Source}
+
+Occurrence records were downloaded from the Paleobiology Database (PBDB; paleobiodb.org) for trilobites from eastern Asia, spanning approximately 76.4° to 150.0°E longitude and 17.0° to 42.1°N latitude. The dataset includes records from China, Korea, India, and adjacent regions. The PBDB query parameters were: base\_id=tid:19100 (Trilobita), lngmin=76.4209, lngmax=150.0293, latmin=17.0148, latmax=42.0656, interval\_id=22 (Cambrian), with fields including coordinates, attributes, location, protection, time, stratigraphy, lithology, geology, remarks, and paleogeographic coordinates.
+
+The PBDB dataset reflects both historical collections and recent research, potentially introducing temporal and geographic biases in sampling. Well-studied formations and regions are overrepresented, while less intensively studied areas may be underrepresented. We address these biases through rarefaction analysis and explicit discussion of sampling limitations.
+
+\subsection{Dataset}
+
+The analysis includes 3,917 trilobite occurrences from 1,299 unique taxa, spanning 51.9 million years from 538.8 to 486.9 million years ago. Stratigraphic data includes 3,844 occurrences with formation assignments across 98 unique formations, and 3,185 occurrences with zone assignments across 149 unique zones.
+
+\subsection{Analytical Methods}
+
+Formation and zone diversity metrics were calculated as the number of unique taxa per formation or zone. Temporal ranges were calculated using midpoint ages between maximum and minimum age estimates from PBDB. Zone durations were calculated as the difference between maximum and minimum ages within each zone. Biostratigraphic ranges were determined by identifying first and last appearances of taxa within zones.
+
+Alpha diversity through time was calculated using 1-million-year bins. Hierarchical clustering was performed on the top 50 taxa using Ward linkage with Euclidean distance on standardized features (mean age, age range, mean latitude, latitudinal range, mean longitude, number of countries). Geographic comparisons were made between China, Korea, and India based on occurrence counts, taxonomic diversity, and temporal ranges.
+
+First and last appearances were calculated for each taxon to assess temporal ranges. Taxon-based origination and extinction rates were calculated per million-year bin by counting first and last appearances of taxa. Rarefaction analysis was performed by randomly sampling 100 occurrences per time bin (1 Myr intervals) for 100 iterations to test robustness of diversity patterns. Time bins with fewer than 100 occurrences were excluded from rarefaction analysis.
+
+\subsection{Software}
+
+Analyses were performed using Python 3.x with pandas (v1.5+), numpy (v1.23+), scipy (v1.9+), scikit-learn (v1.1+), and matplotlib (v3.6+) libraries. Analysis code is available in the supplementary materials and will be deposited in a public repository upon acceptance.
+
+\section{Results}
+
+\subsection{Geographic Distribution}
+
+China contains 3,479 occurrences (89\% of the dataset) with 1,223 unique taxa spanning 522.6 to 487.6 million years ago (Fig. 1). Korea contains 315 occurrences with 65 taxa spanning 505.5 to 491.0 million years ago. India contains 116 occurrences with 56 taxa spanning 517.8 to 501.8 million years ago. The geographic concentration in China reflects both the extent of Cambrian exposures and the intensity of paleontological research in this region.
+
+\subsection{Formation Diversity}
+
+The Huaqiao Formation contains 1,043 occurrences with 204 unique taxa at a mean age of 498.4 million years, representing the highest occurrence count in the dataset (Fig. 6). This formation is a well-studied middle Cambrian carbonate sequence that has yielded extensive trilobite faunas \citep{Peng2004}. The Kaili Formation contains 434 occurrences with 99 taxa at 508.0 million years \citep{Lu2019}. The Hsuchuang Formation contains 186 occurrences with 118 taxa at 505.5 million years, showing high diversity relative to occurrence count, suggesting efficient sampling or high original diversity.
+
+\subsection{Zone Diversity}
+
+The Linguagnostus reconditus zone contains 75 unique taxa from 283 occurrences at 498.8 million years, representing the highest taxonomic diversity among zones (Figs. 6, 7, 8). This zone corresponds to the middle Cambrian and is recognized as a key biostratigraphic interval in eastern Asia \citep{Peng2001}. The Proagnostus bulbus zone contains 50 taxa from 150 occurrences at 498.8 million years. The Glyptagnostus stolidotus zone contains 44 taxa from 76 occurrences at 498.7 million years. The Lejopyge laevigata zone contains 42 taxa from 131 occurrences at 498.8 million years.
+
+Zone durations vary from 0.00 to 9.82 million years, with a mean duration of 0.34 million years. Most zones span less than one million year, indicating relatively short temporal intervals typical of Cambrian biostratigraphy \citep{Peng2012}.
+
+\subsection{Temporal Patterns}
+
+Alpha diversity through time shows an early high at 505 million years ago with 323 unique taxa, followed by a sustained complex of peaks near 498-500 million years ago (Fig. 2). Zone diversity peaks around 498.8 million years ago, with multiple high-diversity zones occurring at this time, including Linguagnostus reconditus, Proagnostus bulbus, and Lejopyge laevigata zones. This analysis centers on the 498.8 million year peak, which represents the most pronounced and sustained diversity increase in the dataset and corresponds to the middle Cambrian.
+
+\subsection{Formation-Zone Relationships}
+
+The dataset contains 3,149 occurrences with both formation and zone data, spanning 61 formations and 146 zones. Some formations contain multiple zones, while some zones span multiple formations, reflecting the hierarchical nature of stratigraphic classification. The Huaqiao Formation, for example, contains multiple zones including the Linguagnostus reconditus zone, indicating that this formation spans a significant temporal interval (Fig. 6).
+
+\subsection{First-Last Appearance Analysis}
+
+Analysis of first and last appearances for 1,299 taxa reveals temporal ranges spanning the study interval (Fig. 3). The top 50 taxa by occurrence count show first appearances ranging from 518.5 to 491.0 million years ago and last appearances ranging from 510.5 to 491.0 million years ago. Many taxa show relatively short temporal ranges, with durations less than 5 million years.
+
+\subsection{Turnover Rates}
+
+Taxon-based origination and extinction rates were calculated per million-year bin (Fig. 4). Origination rates peak around 505-510 million years ago, with elevated rates continuing through the middle Cambrian. Extinction rates show less pronounced peaks but are elevated during intervals of high diversity. The interval around 498.8 million years ago shows modestly elevated origination and extinction rates compared to adjacent bins, consistent with increased faunal change during the diversity peak.
+
+\subsection{Rarefaction Analysis}
+
+Rarefaction analysis was performed to test the robustness of the diversity peak after standardizing for sampling intensity (Fig. 5). We randomly sampled 100 occurrences per million-year bin for 100 iterations, excluding bins with fewer than 100 occurrences. The rarefied diversity curve shows that the peak around 498-500 million years ago remains after standardization, confirming that the pattern is not solely an artifact of sampling bias. The rarefied diversity is lower than raw diversity, as expected, but the relative pattern is preserved, with the 498.8 million year peak clearly visible in both raw and standardized curves.
+
+\subsection{Hierarchical Clustering}
+
+Hierarchical clustering of the top 50 taxa reveals distinct groups based on temporal and geographic features (Fig. 9). Clusters group taxa with similar mean ages, geographic distributions, and temporal ranges. One prominent cluster groups taxa from the middle Cambrian around 498-500 million years ago, including taxa such as Palaeadotes hunanensis, Pianaspis sinensis, and Neoanomocarella asiatica, which are known to co-occur in the Huaqiao Formation. Another cluster groups earlier Cambrian taxa such as Redlichia and Eoredlichia from the early Cambrian interval around 517-518 million years ago.
+
+\section{Discussion}
+
+\subsection{The 498.8 Ma Peak in Regional Context}
+
+The peak in trilobite diversity at 498.8 million years ago corresponds to the middle Cambrian and aligns with reported middle Cambrian faunal changes in eastern Asia. This interval marks the transition between early and middle Cambrian trilobite faunas, characterized by the appearance of new trilobite groups and the decline of earlier forms \citep{Yuan2011, Zhang2008}. The concentration of high-diversity zones at this time, including Linguagnostus reconditus, Proagnostus bulbus, and Lejopyge laevigata, suggests that this was a period of both high biological diversity and favorable conditions for fossil preservation.
+
+Turnover rate analysis shows modestly elevated origination and extinction rates around this interval, consistent with increased faunal change \citep{Hughes2005}. This pattern falls within intervals of faunal change described in global Cambrian compilations \citep{Peng2012}, supporting the interpretation that this represents a regional expression of broader middle Cambrian faunal dynamics. However, we note that these patterns reflect both biological turnover and sampling effects. The rarefaction analysis confirms that the diversity peak remains robust after standardizing for sampling intensity, supporting the interpretation that this represents a genuine diversity increase rather than solely a sampling artifact.
+
+The 498.8 Ma peak occurs within the Drumian Stage of the Cambrian, a time of significant faunal change globally \citep{Peng2012}. This interval corresponds to the middle Cambrian SPICE (Steptoean Positive Carbon Isotope Excursion) event, a global carbon isotope excursion that may have influenced marine ecosystems \citep{Saltzman2004}. In eastern Asia, this interval corresponds to widespread carbonate deposition in shallow marine environments, which may have enhanced both diversity and preservation \citep{Zhou2014, Lin2017, Lin2021}. Sea-level changes during the Cambrian may have influenced habitat availability and preservation potential \citep{HaqShutter2008}. The Huaqiao Formation, which contains the highest occurrence count and spans this interval, represents one of these carbonate sequences.
+
+\subsection{Formation Diversity and Geological Conditions}
+
+The relationship between formation diversity and geological conditions provides insights into the factors controlling trilobite diversity patterns. The Huaqiao Formation's high occurrence count (1,043 occurrences) and high diversity (204 taxa) reflect both intensive study and favorable preservation conditions in carbonate lithologies. Carbonate formations typically preserve trilobites well due to their fine-grained nature and early lithification, which reduces taphonomic loss \citep{Peng2004, Hughes1994}.
+
+The Hsuchuang Formation shows high diversity (118 taxa) relative to occurrence count (186 occurrences), suggesting either high original diversity or efficient sampling. This formation represents a different depositional setting, potentially reflecting different environmental conditions that supported diverse trilobite communities.
+
+The variation in diversity among formations reflects both biological factors, such as habitat diversity and ecological complexity, and geological factors, such as rock availability, preservation quality, and research intensity \citep{Webster2007, Zhang2003}. Distinguishing between these factors requires careful interpretation of the data in context of known geological and paleontological information.
+
+\subsection{Regional Comparison: China, Korea, and India}
+
+Comparison of diversity patterns between China, Korea, and India reveals regional variation in trilobite assemblages. China contains 1,223 taxa from 3,479 occurrences spanning 522.6 to 487.6 million years ago, representing the most extensive record. Korea contains 65 taxa from 315 occurrences spanning 505.5 to 491.0 million years ago, showing a more restricted temporal range. India contains 56 taxa from 116 occurrences spanning 517.8 to 501.8 million years ago, with the oldest occurrences in the dataset.
+
+Faunal composition differs between regions. China is dominated by genera such as Proceratopyge, Redlichia, and Fuchouia, while India shows distinct assemblages with higher representation of Xingrenaspis, Oryctocephalites, and Hundwarella. Only 19 taxa are shared between China and India, indicating substantial faunal differentiation despite geographic proximity \citep{Paterson2007, Zhou2011}.
+
+These differences reflect both actual biogeographic variation and sampling bias. China's extensive record reflects both the large area of Cambrian exposures and intensive paleontological research. Korea's more restricted record may reflect both limited exposures and less intensive study. India's older occurrences and distinct faunal composition suggest different geological history or different research focus. The regional variation in temporal ranges suggests that different areas may have experienced different patterns of trilobite diversification and extinction. China's broad temporal range (35.0 million years) indicates continuous fossil-bearing sequences, while Korea's narrower range (14.5 million years) may reflect either limited exposures or a more restricted interval of trilobite diversity.
+
+\subsection{Interpretation of Cluster Analysis}
+
+The hierarchical clustering of taxa reveals groups based on temporal and geographic similarity. One prominent cluster groups taxa from the middle Cambrian around 498-500 million years ago, including taxa such as Palaeadotes hunanensis, Pianaspis sinensis, and Neoanomocarella asiatica, which are known to co-occur in the Huaqiao Formation. Another cluster groups earlier Cambrian taxa such as Redlichia and Eoredlichia from the early Cambrian interval around 517-518 million years ago.
+
+The clustering results provide a quantitative framework for identifying taxa with similar characteristics, which can inform studies of faunal associations and biogeographic patterns. However, the clusters must be interpreted in context of known taxonomic relationships and paleontological information, as they reflect patterns in the data that may be influenced by sampling bias as well as biological factors.
+
+\subsection{Zones in the Broader Story}
+
+The biostratigraphic zones provide a temporal framework for understanding trilobite diversity patterns (Figs. 7, 8). Biostratigraphic range charts show the temporal spans of zones and key taxa, revealing temporal overlap and relationships (Fig. 7). The concentration of high-diversity zones around 498.8 million years ago reflects both biological diversity and the utility of these zones for biostratigraphic correlation. Zone-based diversity patterns show clear temporal trends with the peak at 498.8 million years ago (Fig. 8). Zones such as Linguagnostus reconditus and Proagnostus bulbus are widely recognized in eastern Asia and provide important markers for regional correlation \citep{Peng2001}.
+
+The short average zone duration (0.34 million years) indicates that these zones represent relatively precise temporal intervals, making them useful for detailed biostratigraphic analysis. However, the variation in zone duration (0.00 to 9.82 million years) suggests that some zones may represent longer intervals or have less precise age constraints.
+
+The relationship between zones and formations provides additional context for understanding the stratigraphic distribution of trilobite diversity. Zones that span multiple formations may represent widespread faunal associations, while zones restricted to single formations may reflect more localized patterns.
+
+\subsection{Sampling Bias and Standardization}
+
+The dataset reflects sampling bias toward well-studied formations and zones. The geographic concentration in China (89\% of occurrences) may not represent full regional diversity, and the temporal distribution reflects both actual diversity patterns and rock availability. Some formations and zones are more intensively studied than others, which may influence diversity metrics.
+
+We tested the robustness of the diversity peak using rarefaction analysis. By randomly sampling 100 occurrences per million-year bin for 100 iterations, we standardized for sampling intensity. The rarefied diversity curve shows that the peak around 498-500 million years ago remains after standardization, confirming that the pattern is not solely an artifact of sampling bias. The peak persists in the rarefied data, though at lower absolute values, indicating that both sampling intensity and genuine diversity contribute to the observed pattern.
+
+The use of PBDB data introduces additional considerations, as the database reflects both historical collections and recent research, potentially introducing temporal bias in sampling. However, the large sample size (3,917 occurrences) and the robustness of the peak to rarefaction provide confidence in the general pattern despite these limitations.
+
+\section{Conclusions}
+
+This study documents a middle Cambrian diversity peak at 498.8 million years ago in eastern Asian trilobite assemblages, corresponding to the Linguagnostus reconditus zone. The peak reflects both biological diversification and geological factors that enhanced fossil preservation in carbonate formations. Rarefaction analysis confirms that the peak remains robust after standardizing for sampling intensity, and turnover rate analysis shows modestly elevated origination and extinction rates around this interval, consistent with broader middle Cambrian faunal changes.
+
+Regional comparison reveals substantial faunal differentiation between China, Korea, and India, with China containing the most extensive record spanning 35.0 million years. Hierarchical clustering identifies distinct groups including a middle Cambrian cluster centered on the Huaqiao Formation fauna and an early Cambrian cluster dominated by Redlichia and related taxa. The integration of formation-based and zone-based diversity metrics provides complementary perspectives on trilobite diversity, demonstrating the utility of combining lithostratigraphic and biostratigraphic data for regional paleobiogeographic analysis.
+
+\section*{CRediT authorship contribution statement}
+
+Kyle T. Jones: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Software, Writing – original draft, Writing – review and editing.
+
+\section*{Declaration of generative AI and AI-assisted technologies in the writing process}
+
+During the preparation of this work, the author used OpenAI and Cursor to assist with language editing and organization of the manuscript. After using these tools, the author reviewed and edited the content as needed and takes full responsibility for the content of the publication.
+
+\section*{Declaration of competing interest}
+
+The author declares that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\section*{Acknowledgements}
+
+Data provided by the Paleobiology Database (paleobiodb.org). We thank the contributors to the PBDB for making these data available.
+
+\section*{Funding}
+
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+
+\section*{Data availability}
+
+The raw occurrence data analyzed in this study are available from the Paleobiology Database (https://paleobiodb.org). The specific dataset used in this analysis can be accessed via PBDB query parameters provided in the Methods section. Analysis code and derived datasets will be deposited in a public repository upon acceptance of this manuscript.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../figures/Fig1.png}
+\caption{Geographic distribution of trilobite occurrences in eastern Asia, showing concentration in China with additional records from Korea and India. Map lines delineate study areas and do not necessarily depict accepted national boundaries.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../figures/Fig2.png}
+\caption{Alpha diversity through time showing peak diversity around 505 Ma and secondary peak at 498-500 Ma.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../figures/Fig3.png}
+\caption{First and last appearances of top 50 taxa, showing temporal ranges and turnover patterns.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../figures/Fig4.png}
+\caption{Origination and extinction rates through time, showing elevated turnover around the diversity peak.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../figures/Fig5.png}
+\caption{Rarefaction analysis comparing raw and standardized diversity, confirming robustness of the peak.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../figures/Fig6.png}
+\caption{Formation and zone relationships showing occurrence counts and taxonomic diversity for top formations and zones.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../figures/Fig7.png}
+\caption{Biostratigraphic ranges of zones and key taxa through time, showing temporal overlap and relationships.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../figures/Fig8.png}
+\caption{Zone-based diversity patterns showing taxonomic diversity and occurrence counts through time.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../figures/Fig9.png}
+\caption{Hierarchical clustering dendrogram of top 50 taxa based on temporal and geographic features. The dendrogram shows distinct clusters including a middle Cambrian group (Palaeadotes hunanensis, Pianaspis sinensis, Neoanomocarella asiatica) and an early Cambrian group (Redlichia, Eoredlichia).}
+\end{figure}
+
+\bibliographystyle{elsarticle-num}
+\bibliography{references}
+
+\end{document}
